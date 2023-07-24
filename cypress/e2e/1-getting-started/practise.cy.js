@@ -1,4 +1,7 @@
 /// <reference types="cypress" />
+// This is a new comment for testing this branch as PR 
+
+
 
 it('Getting URL ', function(){
 
@@ -8,20 +11,3 @@ it('Getting URL ', function(){
    
 })
 
-it('Enter Credentials ', function(){
-
-    cy.visit('https://practicetestautomation.com/practice-test-login/')
-    cy.get('#username').type('student')
-    cy.get('#password').type('Password123')
-    cy.screenshot()
-})
-
-it('Login ', function(){
-
-    cy.visit('https://practicetestautomation.com/practice-test-login/')
-    cy.get('#username').type('student')
-    cy.get('#password').type('Password123')
-    cy.get('#submit').click()
-    cy.url().should('include', 'logged-in-successfully/')
-    cy.screenshot()
-})
